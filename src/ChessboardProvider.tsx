@@ -35,6 +35,8 @@ import {
   PieceRenderObject,
   PositionDataType,
   SquareHandlerArgs,
+  MarginOptions,
+  NotationSides,
 } from './types';
 import { defaultPieces } from './pieces';
 import {
@@ -50,6 +52,9 @@ import {
   defaultLightSquareStyle,
   defaultNumericNotationStyle,
   defaultSquareStyle,
+  defaultMarginOptions,
+  defaultMarginNotationStyle,
+  defaultNotationSides,
 } from './defaults';
 
 type Defined<T> = T extends undefined ? never : T;
@@ -85,6 +90,12 @@ type ContextType = {
   alphaNotationStyle: Defined<ChessboardOptions['alphaNotationStyle']>;
   numericNotationStyle: Defined<ChessboardOptions['numericNotationStyle']>;
   showNotation: Defined<ChessboardOptions['showNotation']>;
+
+  marginOptions: Defined<ChessboardOptions['marginOptions']>;
+  showMargin: Defined<ChessboardOptions['showMargin']>;
+  coordinatesOnMargin: Defined<ChessboardOptions['coordinatesOnMargin']>;
+  marginNotationStyle: Defined<ChessboardOptions['marginNotationStyle']>;
+  notationSides: Defined<ChessboardOptions['notationSides']>;
 
   animationDurationInMs: Defined<ChessboardOptions['animationDurationInMs']>;
   showAnimations: Defined<ChessboardOptions['showAnimations']>;
@@ -160,6 +171,13 @@ export type ChessboardOptions = {
   alphaNotationStyle?: React.CSSProperties;
   numericNotationStyle?: React.CSSProperties;
   showNotation?: boolean;
+
+  // margin
+  marginOptions?: MarginOptions;
+  showMargin?: boolean;
+  coordinatesOnMargin?: boolean;
+  marginNotationStyle?: React.CSSProperties;
+  notationSides?: NotationSides;
 
   // animation
   animationDurationInMs?: number;
@@ -239,6 +257,13 @@ export function ChessboardProvider({
     alphaNotationStyle = defaultAlphaNotationStyle,
     numericNotationStyle = defaultNumericNotationStyle,
     showNotation = true,
+
+    // margin
+    marginOptions = defaultMarginOptions,
+    showMargin = false,
+    coordinatesOnMargin = true,
+    marginNotationStyle = defaultMarginNotationStyle,
+    notationSides = defaultNotationSides,
 
     // animation
     animationDurationInMs = 300,
@@ -641,6 +666,12 @@ export function ChessboardProvider({
         alphaNotationStyle,
         numericNotationStyle,
         showNotation,
+
+        marginOptions,
+        showMargin,
+        coordinatesOnMargin,
+        marginNotationStyle,
+        notationSides,
 
         animationDurationInMs,
         showAnimations,

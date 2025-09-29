@@ -74,3 +74,25 @@ export const defaultArrowOptions = {
   opacity: 0.65, // opacity of arrow when not being drawn
   activeOpacity: 0.5, // opacity of arrow when it is being drawn
 };
+
+export const defaultMarginOptions = {
+  thickness: 25,
+  color: '#f5f5f5',
+};
+
+export const defaultMarginNotationStyle: React.CSSProperties = {
+  fontSize: '12px',
+  fontWeight: 'bold',
+  color: '#333',
+  userSelect: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+export const defaultNotationSides = {
+  top: false,
+  bottom: true,
+  left: true,
+  right: false,
+};

@@ -61,3 +61,15 @@ export type FenPieceString =
   | 'B'
   | 'Q'
   | 'K';
+
+export type MarginOptions = {
+  thickness: number;
+  color: string;
+};
+
+export type NotationSides = {
+  top?: boolean;
+  bottom?: boolean;
+  left?: boolean;
+  right?: boolean;
+};

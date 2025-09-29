@@ -44,6 +44,8 @@ export const Square = memo(function Square({
     alphaNotationStyle,
     numericNotationStyle,
     showNotation,
+    showMargin,
+    coordinatesOnMargin,
     onMouseOutSquare,
     onMouseOverSquare,
     onSquareClick,
@@ -150,7 +152,7 @@ export const Square = memo(function Square({
         })
       }
     >
-      {showNotation ? (
+      {showNotation && !(showMargin && coordinatesOnMargin) ? (
         <span
           style={
             isLightSquare
