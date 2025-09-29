@@ -63,6 +63,9 @@ export function Board() {
                 key={file}
                 style={{
                   flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   ...marginNotationStyle,
                 }}
               >
@@ -86,6 +89,9 @@ export function Board() {
                 key={file}
                 style={{
                   flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   ...marginNotationStyle,
                 }}
               >
@@ -110,6 +116,9 @@ export function Board() {
                 key={rank}
                 style={{
                   flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   ...marginNotationStyle,
                 }}
               >
@@ -134,6 +143,9 @@ export function Board() {
                 key={rank}
                 style={{
                   flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   ...marginNotationStyle,
                 }}
               >

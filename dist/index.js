@@ -5398,6 +5398,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: files.map((file) => (jsxRuntime.jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: file }, file))) })), notationSides.bottom && (jsxRuntime.jsx("div", { style: {
                         gridColumn: '2',
@@ -5406,6 +5409,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: files.map((file) => (jsxRuntime.jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: file }, file))) })), notationSides.left && (jsxRuntime.jsx("div", { style: {
                         gridColumn: '1',
@@ -5415,6 +5421,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: ranks.map((rank) => (jsxRuntime.jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: rank }, rank))) })), notationSides.right && (jsxRuntime.jsx("div", { style: {
                         gridColumn: '3',
@@ -5424,6 +5433,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: ranks.map((rank) => (jsxRuntime.jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: rank }, rank))) })), jsxRuntime.jsx("div", { style: {
                         gridColumn: '1',

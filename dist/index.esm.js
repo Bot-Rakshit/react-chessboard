@@ -5396,6 +5396,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: files.map((file) => (jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: file }, file))) })), notationSides.bottom && (jsx("div", { style: {
                         gridColumn: '2',
@@ -5404,6 +5407,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: files.map((file) => (jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: file }, file))) })), notationSides.left && (jsx("div", { style: {
                         gridColumn: '1',
@@ -5413,6 +5419,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: ranks.map((rank) => (jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: rank }, rank))) })), notationSides.right && (jsx("div", { style: {
                         gridColumn: '3',
@@ -5422,6 +5431,9 @@ function Board() {
                         backgroundColor: marginOptions.color,
                     }, children: ranks.map((rank) => (jsx("div", { style: {
                             flex: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                             ...marginNotationStyle,
                         }, children: rank }, rank))) })), jsx("div", { style: {
                         gridColumn: '1',
