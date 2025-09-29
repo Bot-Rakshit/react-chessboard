@@ -5383,10 +5383,10 @@ function Board() {
         }
         for (let i = 1; i <= chessboardRows; i++) {
             if (boardOrientation === 'white') {
-                ranks.push(i.toString());
+                ranks.unshift(i.toString());
             }
             else {
-                ranks.unshift(i.toString());
+                ranks.push(i.toString());
             }
         }
         return (jsxs(Fragment$1, { children: [notationSides.top && (jsx("div", { style: {

@@ -41,9 +41,9 @@ export function Board() {
 
     for (let i = 1; i <= chessboardRows; i++) {
       if (boardOrientation === 'white') {
-        ranks.push(i.toString());
-      } else {
         ranks.unshift(i.toString());
+      } else {
+        ranks.push(i.toString());
       }
     }
 
