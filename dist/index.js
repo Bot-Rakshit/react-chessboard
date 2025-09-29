@@ -5425,23 +5425,23 @@ function Board() {
                     }, children: ranks.map((rank) => (jsxRuntime.jsx("div", { style: {
                             flex: 1,
                             ...marginNotationStyle,
-                        }, children: rank }, rank))) })), (!notationSides.top || !notationSides.left) && (jsxRuntime.jsx("div", { style: {
+                        }, children: rank }, rank))) })), jsxRuntime.jsx("div", { style: {
                         gridColumn: '1',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.top || !notationSides.right) && (jsxRuntime.jsx("div", { style: {
+                    } }), jsxRuntime.jsx("div", { style: {
                         gridColumn: '3',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.bottom || !notationSides.left) && (jsxRuntime.jsx("div", { style: {
+                    } }), jsxRuntime.jsx("div", { style: {
                         gridColumn: '1',
                         gridRow: '3',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.bottom || !notationSides.right) && (jsxRuntime.jsx("div", { style: {
+                    } }), jsxRuntime.jsx("div", { style: {
                         gridColumn: '3',
                         gridRow: '3',
                         backgroundColor: marginOptions.color,
-                    } })), !notationSides.top && (jsxRuntime.jsx("div", { style: {
+                    } }), !notationSides.top && (jsxRuntime.jsx("div", { style: {
                         gridColumn: '2',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
@@ -5464,6 +5464,7 @@ function Board() {
             display: 'grid',
             gridTemplateColumns: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
             gridTemplateRows: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
+            gap: 0,
             width: '100%',
             height: '100%',
             aspectRatio: '1',

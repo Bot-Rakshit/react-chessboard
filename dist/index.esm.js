@@ -5423,23 +5423,23 @@ function Board() {
                     }, children: ranks.map((rank) => (jsx("div", { style: {
                             flex: 1,
                             ...marginNotationStyle,
-                        }, children: rank }, rank))) })), (!notationSides.top || !notationSides.left) && (jsx("div", { style: {
+                        }, children: rank }, rank))) })), jsx("div", { style: {
                         gridColumn: '1',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.top || !notationSides.right) && (jsx("div", { style: {
+                    } }), jsx("div", { style: {
                         gridColumn: '3',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.bottom || !notationSides.left) && (jsx("div", { style: {
+                    } }), jsx("div", { style: {
                         gridColumn: '1',
                         gridRow: '3',
                         backgroundColor: marginOptions.color,
-                    } })), (!notationSides.bottom || !notationSides.right) && (jsx("div", { style: {
+                    } }), jsx("div", { style: {
                         gridColumn: '3',
                         gridRow: '3',
                         backgroundColor: marginOptions.color,
-                    } })), !notationSides.top && (jsx("div", { style: {
+                    } }), !notationSides.top && (jsx("div", { style: {
                         gridColumn: '2',
                         gridRow: '1',
                         backgroundColor: marginOptions.color,
@@ -5462,6 +5462,7 @@ function Board() {
             display: 'grid',
             gridTemplateColumns: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
             gridTemplateRows: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
+            gap: 0,
             width: '100%',
             height: '100%',
             aspectRatio: '1',

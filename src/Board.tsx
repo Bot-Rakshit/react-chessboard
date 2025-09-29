@@ -143,42 +143,35 @@ export function Board() {
           </div>
         )}
 
-        {(!notationSides.top || !notationSides.left) && (
-          <div
-            style={{
-              gridColumn: '1',
-              gridRow: '1',
-              backgroundColor: marginOptions.color,
-            }}
-          />
-        )}
-        {(!notationSides.top || !notationSides.right) && (
-          <div
-            style={{
-              gridColumn: '3',
-              gridRow: '1',
-              backgroundColor: marginOptions.color,
-            }}
-          />
-        )}
-        {(!notationSides.bottom || !notationSides.left) && (
-          <div
-            style={{
-              gridColumn: '1',
-              gridRow: '3',
-              backgroundColor: marginOptions.color,
-            }}
-          />
-        )}
-        {(!notationSides.bottom || !notationSides.right) && (
-          <div
-            style={{
-              gridColumn: '3',
-              gridRow: '3',
-              backgroundColor: marginOptions.color,
-            }}
-          />
-        )}
+        {/* Always render corners so adjacent margins meet seamlessly */}
+        <div
+          style={{
+            gridColumn: '1',
+            gridRow: '1',
+            backgroundColor: marginOptions.color,
+          }}
+        />
+        <div
+          style={{
+            gridColumn: '3',
+            gridRow: '1',
+            backgroundColor: marginOptions.color,
+          }}
+        />
+        <div
+          style={{
+            gridColumn: '1',
+            gridRow: '3',
+            backgroundColor: marginOptions.color,
+          }}
+        />
+        <div
+          style={{
+            gridColumn: '3',
+            gridRow: '3',
+            backgroundColor: marginOptions.color,
+          }}
+        />
 
         {!notationSides.top && (
           <div
@@ -225,6 +218,7 @@ export function Board() {
         display: 'grid',
         gridTemplateColumns: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
         gridTemplateRows: `${marginOptions.thickness}px 1fr ${marginOptions.thickness}px`,
+        gap: 0,
         width: '100%',
         height: '100%',
         aspectRatio: '1',
